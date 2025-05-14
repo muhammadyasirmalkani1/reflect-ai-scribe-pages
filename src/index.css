@@ -52,6 +52,10 @@
 }
 
 @layer utilities {
+  .rounded-inherit {
+    border-radius: inherit;
+  }
+
   .cosmic-text-gradient {
     @apply bg-gradient-to-r from-reflect-purple to-reflect-blue bg-clip-text text-transparent;
   }
