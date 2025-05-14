@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Search } from "lucide-react";
+import { Search, List } from "lucide-react";
 
 const docCategories = [
   {
@@ -133,6 +133,20 @@ const Docs = () => {
             >
               Everything you need to get the most out of Reflect.
             </motion.p>
+            
+            {/* View All Pages Button */}
+            <motion.div
+              className="mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <Link to="/docs/all">
+                <Button variant="outline" className="border-reflect-purple/30 hover:bg-reflect-purple/10">
+                  <List className="mr-2" size={18} /> View All Pages
+                </Button>
+              </Link>
+            </motion.div>
             
             <motion.div
               className="max-w-2xl mx-auto relative"
