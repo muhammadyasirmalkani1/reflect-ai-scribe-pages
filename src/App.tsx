@@ -27,6 +27,10 @@ import NotionImport from "./pages/docs/NotionImport";
 import SlackIntegration from "./pages/docs/SlackIntegration";
 import APIDocumentation from "./pages/docs/APIDocumentation";
 import BrowserExtension from "./pages/docs/BrowserExtension";
+import SyncIssues from "./pages/docs/SyncIssues";
+import PerformanceOptimization from "./pages/docs/PerformanceOptimization";
+import CommonErrors from "./pages/docs/CommonErrors";
+import ContactSupport from "./pages/docs/ContactSupport";
 
 const queryClient = new QueryClient();
 

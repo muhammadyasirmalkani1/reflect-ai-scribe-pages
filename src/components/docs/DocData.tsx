@@ -64,10 +64,10 @@ export const docCategories: DocCategory[] = [
     name: "Troubleshooting",
     icon: <AlertCircle className="w-6 h-6" />,
     articles: [
-      { title: "Sync issues", url: "#" },
-      { title: "Performance optimization", url: "#" },
-      { title: "Common errors", url: "#" },
-      { title: "Contact support", url: "#" }
+      { title: "Sync issues", url: "/docs/sync-issues" },
+      { title: "Performance optimization", url: "/docs/performance-optimization" },
+      { title: "Common errors", url: "/docs/common-errors" },
+      { title: "Contact support", url: "/docs/contact-support" }
     ]
   },
   {
