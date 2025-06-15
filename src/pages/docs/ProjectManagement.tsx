@@ -245,7 +245,7 @@ const ProjectManagement = () => {
                   <h4 className="font-semibold text-red-400 mb-2">High Risk</h4>
                   <ul className="text-gray-300 text-sm space-y-1">
                     <li>• Key team member departure</li>
-                    <li>• Budget overrun > 20%</li>
+                    <li>• Budget overrun &gt; 20%</li>
                     <li>• Major scope changes</li>
                   </ul>
                 </div>
