@@ -44,10 +44,10 @@ export const docCategories: DocCategory[] = [
     name: "Guides",
     icon: <BookOpen className="w-6 h-6" />,
     articles: [
-      { title: "Building a personal wiki", url: "#" },
-      { title: "Research workflows", url: "#" },
-      { title: "Meeting notes", url: "#" },
-      { title: "Project management", url: "#" }
+      { title: "Building a personal wiki", url: "/docs/building-personal-wiki" },
+      { title: "Research workflows", url: "/docs/research-workflows" },
+      { title: "Project management", url: "/docs/project-management" },
+      { title: "Meeting notes", url: "#" }
     ]
   },
   {

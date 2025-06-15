@@ -20,6 +20,9 @@ import AIAssistant from "./pages/docs/AIAssistant";
 import KnowledgeGraph from "./pages/docs/KnowledgeGraph";
 import SmartLinking from "./pages/docs/SmartLinking";
 import TagsCategories from "./pages/docs/TagsCategories";
+import BuildingPersonalWiki from "./pages/docs/BuildingPersonalWiki";
+import ResearchWorkflows from "./pages/docs/ResearchWorkflows";
+import ProjectManagement from "./pages/docs/ProjectManagement";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +56,10 @@ const App = () => (
           <Route path="/docs/knowledge-graph" element={<KnowledgeGraph />} />
           <Route path="/docs/smart-linking" element={<SmartLinking />} />
           <Route path="/docs/tags-categories" element={<TagsCategories />} />
+          {/* NEW: Guide pages */}
+          <Route path="/docs/building-personal-wiki" element={<BuildingPersonalWiki />} />
+          <Route path="/docs/research-workflows" element={<ResearchWorkflows />} />
+          <Route path="/docs/project-management" element={<ProjectManagement />} />
           {/* Dynamic fallback: */}
           <Route path="/docs/:category" element={<DocsCategoryPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
