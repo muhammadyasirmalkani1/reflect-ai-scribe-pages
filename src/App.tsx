@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,6 +10,7 @@ import Products from "./pages/Products";
 import PricingPage from "./pages/PricingPage";
 import Company from "./pages/Company";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Docs from "./pages/Docs";
 import DocsList from "./pages/DocsList";
 import DocsCategoryPage from "./pages/docs/DocsCategoryPage";
@@ -46,6 +48,7 @@ const App = () => (
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/company" element={<Company />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/docs" element={<Docs />} />
           <Route path="/docs/all" element={<DocsList />} />
           {/* Category pages */}
@@ -74,6 +77,11 @@ const App = () => (
           <Route path="/docs/slack-integration" element={<SlackIntegration />} />
           <Route path="/docs/api-documentation" element={<APIDocumentation />} />
           <Route path="/docs/browser-extension" element={<BrowserExtension />} />
+          {/* Troubleshooting pages */}
+          <Route path="/docs/sync-issues" element={<SyncIssues />} />
+          <Route path="/docs/performance-optimization" element={<PerformanceOptimization />} />
+          <Route path="/docs/common-errors" element={<CommonErrors />} />
+          <Route path="/docs/contact-support" element={<ContactSupport />} />
           {/* Dynamic fallback */}
           <Route path="/docs/:category" element={<DocsCategoryPage />} />
           {/* Catch-all route */}
