@@ -25,10 +25,10 @@ export const docCategories: DocCategory[] = [
     name: "Getting Started",
     icon: <Zap className="w-6 h-6" />,
     articles: [
-      { title: "Welcome to Reflect", url: "#" },
-      { title: "Installing Reflect", url: "#" },
-      { title: "Creating your first note", url: "#" },
-      { title: "Navigating the interface", url: "#" }
+      { title: "Welcome to Reflect", url: "/docs/welcome-to-reflect" },
+      { title: "Installing Reflect", url: "/docs/installing-reflect" },
+      { title: "Creating your first note", url: "/docs/creating-your-first-note" },
+      { title: "Navigating the interface", url: "/docs/navigating-the-interface" }
     ]
   },
   {

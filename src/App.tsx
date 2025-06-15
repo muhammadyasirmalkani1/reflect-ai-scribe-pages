@@ -13,6 +13,10 @@ import Blog from "./pages/Blog";
 import Docs from "./pages/Docs";
 import DocsList from "./pages/DocsList";
 import DocsCategoryPage from "./pages/docs/DocsCategoryPage";
+import WelcomeToReflect from "./pages/docs/WelcomeToReflect";
+import InstallingReflect from "./pages/docs/InstallingReflect";
+import CreatingYourFirstNote from "./pages/docs/CreatingYourFirstNote";
+import NavigatingTheInterface from "./pages/docs/NavigatingTheInterface";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +41,11 @@ const App = () => (
           <Route path="/docs/integrations" element={<DocsCategoryPage />} />
           <Route path="/docs/troubleshooting" element={<DocsCategoryPage />} />
           <Route path="/docs/advanced" element={<DocsCategoryPage />} />
+          {/* Individual article pages */}
+          <Route path="/docs/welcome-to-reflect" element={<WelcomeToReflect />} />
+          <Route path="/docs/installing-reflect" element={<InstallingReflect />} />
+          <Route path="/docs/creating-your-first-note" element={<CreatingYourFirstNote />} />
+          <Route path="/docs/navigating-the-interface" element={<NavigatingTheInterface />} />
           {/* Dynamic fallback: */}
           <Route path="/docs/:category" element={<DocsCategoryPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
