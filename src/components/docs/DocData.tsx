@@ -54,10 +54,10 @@ export const docCategories: DocCategory[] = [
     name: "Integrations",
     icon: <Grid className="w-6 h-6" />,
     articles: [
-      { title: "Notion import", url: "#" },
-      { title: "Slack integration", url: "#" },
-      { title: "API documentation", url: "#" },
-      { title: "Browser extension", url: "#" }
+      { title: "Notion import", url: "/docs/notion-import" },
+      { title: "Slack integration", url: "/docs/slack-integration" },
+      { title: "API documentation", url: "/docs/api-documentation" },
+      { title: "Browser extension", url: "/docs/browser-extension" }
     ]
   },
   {

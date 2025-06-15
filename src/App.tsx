@@ -23,6 +23,10 @@ import TagsCategories from "./pages/docs/TagsCategories";
 import BuildingPersonalWiki from "./pages/docs/BuildingPersonalWiki";
 import ResearchWorkflows from "./pages/docs/ResearchWorkflows";
 import ProjectManagement from "./pages/docs/ProjectManagement";
+import NotionImport from "./pages/docs/NotionImport";
+import SlackIntegration from "./pages/docs/SlackIntegration";
+import APIDocumentation from "./pages/docs/APIDocumentation";
+import BrowserExtension from "./pages/docs/BrowserExtension";
 
 const queryClient = new QueryClient();
 
@@ -40,29 +44,35 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/docs" element={<Docs />} />
           <Route path="/docs/all" element={<DocsList />} />
-          {/* NEW: Category pages */}
+          {/* Category pages */}
           <Route path="/docs/getting-started" element={<DocsCategoryPage />} />
           <Route path="/docs/features" element={<DocsCategoryPage />} />
           <Route path="/docs/guides" element={<DocsCategoryPage />} />
           <Route path="/docs/integrations" element={<DocsCategoryPage />} />
           <Route path="/docs/troubleshooting" element={<DocsCategoryPage />} />
           <Route path="/docs/advanced" element={<DocsCategoryPage />} />
-          {/* Individual article pages */}
+          {/* Getting Started pages */}
           <Route path="/docs/welcome-to-reflect" element={<WelcomeToReflect />} />
           <Route path="/docs/installing-reflect" element={<InstallingReflect />} />
           <Route path="/docs/creating-your-first-note" element={<CreatingYourFirstNote />} />
           <Route path="/docs/navigating-the-interface" element={<NavigatingTheInterface />} />
+          {/* Features pages */}
           <Route path="/docs/ai-assistant" element={<AIAssistant />} />
           <Route path="/docs/knowledge-graph" element={<KnowledgeGraph />} />
           <Route path="/docs/smart-linking" element={<SmartLinking />} />
           <Route path="/docs/tags-categories" element={<TagsCategories />} />
-          {/* NEW: Guide pages */}
+          {/* Guides pages */}
           <Route path="/docs/building-personal-wiki" element={<BuildingPersonalWiki />} />
           <Route path="/docs/research-workflows" element={<ResearchWorkflows />} />
           <Route path="/docs/project-management" element={<ProjectManagement />} />
-          {/* Dynamic fallback: */}
+          {/* Integration pages */}
+          <Route path="/docs/notion-import" element={<NotionImport />} />
+          <Route path="/docs/slack-integration" element={<SlackIntegration />} />
+          <Route path="/docs/api-documentation" element={<APIDocumentation />} />
+          <Route path="/docs/browser-extension" element={<BrowserExtension />} />
+          {/* Dynamic fallback */}
           <Route path="/docs/:category" element={<DocsCategoryPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* Catch-all route */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
