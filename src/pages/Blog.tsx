@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -66,6 +65,66 @@ const blogPosts = [
     author: "David Kim",
     authorRole: "VP of Operations",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+  },
+  {
+    id: 7,
+    title: "Collaborative Note-Taking: Teams That Think Together",
+    excerpt: "Best practices for using Reflect in team environments to create shared knowledge bases and improve collaboration.",
+    category: "Tutorial",
+    date: "March 30, 2025",
+    author: "Jennifer Liu",
+    authorRole: "Product Manager",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978"
+  },
+  {
+    id: 8,
+    title: "The Psychology of Information Overload",
+    excerpt: "Understanding why we struggle with too much information and how strategic note-taking can help us regain control.",
+    category: "Research",
+    date: "March 25, 2025",
+    author: "Dr. Michael Torres",
+    authorRole: "Research Scientist",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+  },
+  {
+    id: 9,
+    title: "Migrating from Traditional Note Apps to Reflect",
+    excerpt: "A step-by-step guide for users transitioning from other note-taking applications to Reflect's connected approach.",
+    category: "Tutorial",
+    date: "March 18, 2025",
+    author: "Rachel Green",
+    authorRole: "Technical Writer",
+    image: "https://images.unsplash.com/photo-1484807352052-23338990c6c6"
+  },
+  {
+    id: 10,
+    title: "Innovation Through Connection: Case Studies from Our Users",
+    excerpt: "Real stories from entrepreneurs, researchers, and creatives who've made breakthrough discoveries using Reflect.",
+    category: "Case Study",
+    date: "March 12, 2025",
+    author: "Tom Anderson",
+    authorRole: "Community Manager",
+    image: "https://images.unsplash.com/photo-1553028826-f4804a6dfd3f"
+  },
+  {
+    id: 11,
+    title: "The Art of Digital Minimalism in Knowledge Management",
+    excerpt: "How to maintain focus and clarity in your note-taking practice without getting overwhelmed by features and complexity.",
+    category: "Insights",
+    date: "March 5, 2025",
+    author: "Lisa Chen",
+    authorRole: "UX Designer",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643"
+  },
+  {
+    id: 12,
+    title: "Building Learning Pathways with Connected Notes",
+    excerpt: "Strategies for students and lifelong learners to create structured learning journeys using Reflect's linking capabilities.",
+    category: "Tutorial",
+    date: "February 28, 2025",
+    author: "Kevin Park",
+    authorRole: "Education Specialist",
+    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570"
   }
 ];
 
@@ -154,9 +213,11 @@ const Blog = () => {
                 </div>
                 <span className="text-gray-400 text-sm">{blogPosts[0].date}</span>
               </div>
-              <Button className="bg-cosmic-gradient hover:opacity-90 transition-opacity">
-                Read Article
-              </Button>
+              <Link to={`/blog/${blogPosts[0].id}`}>
+                <Button className="bg-cosmic-gradient hover:opacity-90 transition-opacity">
+                  Read Article
+                </Button>
+              </Link>
             </div>
             <div className="rounded-xl overflow-hidden">
               <img 
