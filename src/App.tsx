@@ -12,6 +12,7 @@ import Company from "./pages/Company";
 import Blog from "./pages/Blog";
 import Docs from "./pages/Docs";
 import DocsList from "./pages/DocsList";
+import DocsCategoryPage from "./pages/docs/DocsCategoryPage";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,15 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/docs" element={<Docs />} />
           <Route path="/docs/all" element={<DocsList />} />
+          {/* NEW: Category pages */}
+          <Route path="/docs/getting-started" element={<DocsCategoryPage />} />
+          <Route path="/docs/features" element={<DocsCategoryPage />} />
+          <Route path="/docs/guides" element={<DocsCategoryPage />} />
+          <Route path="/docs/integrations" element={<DocsCategoryPage />} />
+          <Route path="/docs/troubleshooting" element={<DocsCategoryPage />} />
+          <Route path="/docs/advanced" element={<DocsCategoryPage />} />
+          {/* Dynamic fallback: */}
+          <Route path="/docs/:category" element={<DocsCategoryPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
