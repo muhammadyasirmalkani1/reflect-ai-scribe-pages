@@ -1,9 +1,11 @@
+
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import NewsletterSignup from "@/components/NewsletterSignup";
+import { useState } from "react";
 
 const blogPosts = [
   {
@@ -125,12 +127,93 @@ const blogPosts = [
     author: "Kevin Park",
     authorRole: "Education Specialist",
     image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570"
+  },
+  {
+    id: 13,
+    title: "Privacy-First Knowledge Management",
+    excerpt: "How Reflect ensures your thoughts and ideas remain secure while still providing powerful AI assistance.",
+    category: "Product",
+    date: "February 20, 2025",
+    author: "Alex Johnson",
+    authorRole: "CEO",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3"
+  },
+  {
+    id: 14,
+    title: "The Power of Bidirectional Linking",
+    excerpt: "Understanding how bidirectional links create a web of knowledge that mirrors how your brain actually works.",
+    category: "Research",
+    date: "February 15, 2025",
+    author: "Dr. Elena Rodriguez",
+    authorRole: "Head of AI",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa"
+  },
+  {
+    id: 15,
+    title: "Creative Writing with AI: A New Partnership",
+    excerpt: "How writers are using Reflect's AI features to overcome writer's block and explore new narrative possibilities.",
+    category: "Case Study",
+    date: "February 10, 2025",
+    author: "Marcus Williams",
+    authorRole: "Head of Design",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a"
+  },
+  {
+    id: 16,
+    title: "Building Your Daily Knowledge Routine",
+    excerpt: "Simple habits that will transform how you capture, process, and connect information every day.",
+    category: "Tutorial",
+    date: "February 5, 2025",
+    author: "Sarah Chen",
+    authorRole: "CTO",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4"
+  },
+  {
+    id: 17,
+    title: "The Network Effect in Personal Knowledge",
+    excerpt: "Why the value of your knowledge base grows exponentially as you add more connected information.",
+    category: "Insights",
+    date: "January 30, 2025",
+    author: "David Kim",
+    authorRole: "VP of Operations",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0"
+  },
+  {
+    id: 18,
+    title: "Voice Notes and AI Transcription",
+    excerpt: "How to seamlessly capture ideas on the go and have them automatically transcribed and connected to your knowledge graph.",
+    category: "Product",
+    date: "January 25, 2025",
+    author: "Priya Patel",
+    authorRole: "Customer Success",
+    image: "https://images.unsplash.com/photo-1589254065878-42c9da997008"
   }
 ];
 
 const categories = ["All", "Product", "Tutorial", "Research", "Case Study", "Insights"];
 
+const POSTS_PER_LOAD = 6;
+
 const Blog = () => {
+  const [visiblePosts, setVisiblePosts] = useState(POSTS_PER_LOAD);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filteredPosts = selectedCategory === "All" 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+
+  const displayedPosts = filteredPosts.slice(0, visiblePosts);
+  const hasMorePosts = visiblePosts < filteredPosts.length;
+
+  const loadMorePosts = () => {
+    setVisiblePosts(prev => prev + POSTS_PER_LOAD);
+  };
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setVisiblePosts(POSTS_PER_LOAD);
+  };
+
   return (
     <div className="min-h-screen bg-reflect-dark overflow-hidden">
       <Navbar />
@@ -172,11 +255,12 @@ const Blog = () => {
               {categories.map((category, index) => (
                 <Button 
                   key={index}
-                  variant={index === 0 ? "default" : "outline"} 
-                  className={index === 0 ? 
+                  variant={selectedCategory === category ? "default" : "outline"} 
+                  className={selectedCategory === category ? 
                     "bg-cosmic-gradient hover:opacity-90 transition-opacity" : 
                     "border-reflect-purple/30 hover:bg-reflect-purple/10"
                   }
+                  onClick={() => handleCategoryChange(category)}
                 >
                   {category}
                 </Button>
@@ -198,22 +282,22 @@ const Blog = () => {
           >
             <div>
               <span className="inline-block text-reflect-purple text-sm font-medium mb-2">
-                {blogPosts[0].category}
+                {displayedPosts[0]?.category}
               </span>
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                {blogPosts[0].title}
+                {displayedPosts[0]?.title}
               </h2>
               <p className="text-gray-300 mb-6">
-                {blogPosts[0].excerpt}
+                {displayedPosts[0]?.excerpt}
               </p>
               <div className="flex items-center mb-6">
                 <div className="mr-4">
-                  <p className="font-semibold">{blogPosts[0].author}</p>
-                  <p className="text-sm text-gray-400">{blogPosts[0].authorRole}</p>
+                  <p className="font-semibold">{displayedPosts[0]?.author}</p>
+                  <p className="text-sm text-gray-400">{displayedPosts[0]?.authorRole}</p>
                 </div>
-                <span className="text-gray-400 text-sm">{blogPosts[0].date}</span>
+                <span className="text-gray-400 text-sm">{displayedPosts[0]?.date}</span>
               </div>
-              <Link to={`/blog/${blogPosts[0].id}`}>
+              <Link to={`/blog/${displayedPosts[0]?.id}`}>
                 <Button className="bg-cosmic-gradient hover:opacity-90 transition-opacity">
                   Read Article
                 </Button>
@@ -221,8 +305,8 @@ const Blog = () => {
             </div>
             <div className="rounded-xl overflow-hidden">
               <img 
-                src={blogPosts[0].image} 
-                alt={blogPosts[0].title} 
+                src={displayedPosts[0]?.image} 
+                alt={displayedPosts[0]?.title} 
                 className="w-full h-64 object-cover"
               />
             </div>
@@ -234,7 +318,7 @@ const Blog = () => {
       <div className="py-16 relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.slice(1).map((post, index) => (
+            {displayedPosts.slice(1).map((post, index) => (
               <motion.div 
                 key={post.id}
                 className="bg-reflect-dark/50 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
@@ -266,11 +350,26 @@ const Blog = () => {
           </div>
           
           {/* Load More Button */}
-          <div className="mt-12 text-center">
-            <Button variant="outline" className="border-reflect-purple/30 hover:bg-reflect-purple/10">
-              Load More Articles
-            </Button>
-          </div>
+          {hasMorePosts && (
+            <div className="mt-12 text-center">
+              <Button 
+                variant="outline" 
+                className="border-reflect-purple/30 hover:bg-reflect-purple/10"
+                onClick={loadMorePosts}
+              >
+                Load More Articles ({filteredPosts.length - visiblePosts} remaining)
+              </Button>
+            </div>
+          )}
+          
+          {/* Show total posts when all are loaded */}
+          {!hasMorePosts && filteredPosts.length > POSTS_PER_LOAD && (
+            <div className="mt-12 text-center">
+              <p className="text-gray-400">
+                Showing all {filteredPosts.length} articles
+              </p>
+            </div>
+          )}
         </div>
       </div>
       
