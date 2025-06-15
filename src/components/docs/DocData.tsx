@@ -1,4 +1,3 @@
-
 import { ReactNode } from "react";
 import { 
   Zap, 
@@ -35,10 +34,10 @@ export const docCategories: DocCategory[] = [
     name: "Features",
     icon: <Lightbulb className="w-6 h-6" />,
     articles: [
-      { title: "AI Assistant", url: "#" },
-      { title: "Knowledge Graph", url: "#" },
-      { title: "Smart Linking", url: "#" },
-      { title: "Tags & Categories", url: "#" }
+      { title: "AI Assistant", url: "/docs/ai-assistant" },
+      { title: "Knowledge Graph", url: "/docs/knowledge-graph" },
+      { title: "Smart Linking", url: "/docs/smart-linking" },
+      { title: "Tags & Categories", url: "/docs/tags-categories" }
     ]
   },
   {

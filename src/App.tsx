@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +16,10 @@ import WelcomeToReflect from "./pages/docs/WelcomeToReflect";
 import InstallingReflect from "./pages/docs/InstallingReflect";
 import CreatingYourFirstNote from "./pages/docs/CreatingYourFirstNote";
 import NavigatingTheInterface from "./pages/docs/NavigatingTheInterface";
+import AIAssistant from "./pages/docs/AIAssistant";
+import KnowledgeGraph from "./pages/docs/KnowledgeGraph";
+import SmartLinking from "./pages/docs/SmartLinking";
+import TagsCategories from "./pages/docs/TagsCategories";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +49,10 @@ const App = () => (
           <Route path="/docs/installing-reflect" element={<InstallingReflect />} />
           <Route path="/docs/creating-your-first-note" element={<CreatingYourFirstNote />} />
           <Route path="/docs/navigating-the-interface" element={<NavigatingTheInterface />} />
+          <Route path="/docs/ai-assistant" element={<AIAssistant />} />
+          <Route path="/docs/knowledge-graph" element={<KnowledgeGraph />} />
+          <Route path="/docs/smart-linking" element={<SmartLinking />} />
+          <Route path="/docs/tags-categories" element={<TagsCategories />} />
           {/* Dynamic fallback: */}
           <Route path="/docs/:category" element={<DocsCategoryPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
