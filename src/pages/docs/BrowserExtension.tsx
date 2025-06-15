@@ -3,7 +3,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { ArrowLeft, Chrome, Firefox, Edge, Bookmark, Zap, Shield, Download, MousePointer, Keyboard, Settings } from "lucide-react";
+import { ArrowLeft, Chrome, Globe, Monitor, Bookmark, Zap, Shield, Download, MousePointer, Keyboard, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -64,7 +64,7 @@ const BrowserExtension = () => {
             <Card className="bg-reflect-dark/50 border-white/10">
               <CardHeader>
                 <CardTitle className="text-lg flex items-center">
-                  <Firefox className="w-6 h-6 mr-3 text-orange-400" />
+                  <Globe className="w-6 h-6 mr-3 text-orange-400" />
                   Firefox
                 </CardTitle>
               </CardHeader>
@@ -79,7 +79,7 @@ const BrowserExtension = () => {
             <Card className="bg-reflect-dark/50 border-white/10">
               <CardHeader>
                 <CardTitle className="text-lg flex items-center">
-                  <Edge className="w-6 h-6 mr-3 text-blue-600" />
+                  <Monitor className="w-6 h-6 mr-3 text-blue-600" />
                   Edge
                 </CardTitle>
               </CardHeader>
