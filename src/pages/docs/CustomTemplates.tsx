@@ -1,9 +1,10 @@
 
+import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { ArrowLeft, FileText, Plus, Copy, Settings } from "lucide-react";
+import { ArrowLeft, FileText, Plus, Settings } from "lucide-react";
 
 const CustomTemplates = () => {
   return (
@@ -129,7 +130,7 @@ const CustomTemplates = () => {
               <div className="bg-reflect-purple/10 border border-reflect-purple/20 rounded-lg p-4">
                 <h4 className="font-semibold text-reflect-purple mb-2">🔄 Template Variables</h4>
                 <p className="text-gray-300 text-sm">
-                  Use variables like <code>{{date}}</code>, <code>{{time}}</code>, or <code>{{title}}</code> that get automatically replaced when creating from template.
+                  Use variables like <code>{"{{date}}"}</code>, <code>{"{{time}}"}</code>, or <code>{"{{title}}"}</code> that get automatically replaced when creating from template.
                 </p>
               </div>
             </div>
@@ -143,9 +144,9 @@ const CustomTemplates = () => {
                   Create sections that appear based on certain conditions or user choices.
                 </p>
                 <div className="bg-gray-800 rounded p-3 text-sm text-gray-300">
-                  <code>{{if meeting_type == "standup"}}</code><br/>
-                  <code>## Yesterday's Progress</code><br/>
-                  <code>{{endif}}</code>
+                  <code>{"{{if meeting_type == \"standup\"}}"}</code><br/>
+                  <code>## Yesterday&apos;s Progress</code><br/>
+                  <code>{"{{endif}}"}</code>
                 </div>
               </div>
               
@@ -155,8 +156,8 @@ const CustomTemplates = () => {
                   Include other templates within templates for modular note structures.
                 </p>
                 <div className="bg-gray-800 rounded p-3 text-sm text-gray-300">
-                  <code>{{include: "header-template"}}</code><br/>
-                  <code>{{include: "action-items"}}</code>
+                  <code>{"{{include: \"header-template\"}}"}</code><br/>
+                  <code>{"{{include: \"action-items\"}}"}</code>
                 </div>
               </div>
             </div>
