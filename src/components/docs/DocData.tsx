@@ -1,3 +1,4 @@
+
 import { ReactNode } from "react";
 import { 
   Zap, 
@@ -74,10 +75,10 @@ export const docCategories: DocCategory[] = [
     name: "Advanced",
     icon: <Settings className="w-6 h-6" />,
     articles: [
-      { title: "Custom templates", url: "#" },
-      { title: "Keyboard shortcuts", url: "#" },
-      { title: "Advanced search", url: "#" },
-      { title: "Data export", url: "#" }
+      { title: "Custom templates", url: "/docs/custom-templates" },
+      { title: "Keyboard shortcuts", url: "/docs/keyboard-shortcuts" },
+      { title: "Advanced search", url: "/docs/advanced-search" },
+      { title: "Data export", url: "/docs/data-export" }
     ]
   }
 ];

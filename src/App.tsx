@@ -33,6 +33,10 @@ import SyncIssues from "./pages/docs/SyncIssues";
 import PerformanceOptimization from "./pages/docs/PerformanceOptimization";
 import CommonErrors from "./pages/docs/CommonErrors";
 import ContactSupport from "./pages/docs/ContactSupport";
+import CustomTemplates from "./pages/docs/CustomTemplates";
+import KeyboardShortcuts from "./pages/docs/KeyboardShortcuts";
+import AdvancedSearch from "./pages/docs/AdvancedSearch";
+import DataExport from "./pages/docs/DataExport";
 
 const queryClient = new QueryClient();
 
@@ -82,6 +86,11 @@ const App = () => (
           <Route path="/docs/performance-optimization" element={<PerformanceOptimization />} />
           <Route path="/docs/common-errors" element={<CommonErrors />} />
           <Route path="/docs/contact-support" element={<ContactSupport />} />
+          {/* Advanced pages */}
+          <Route path="/docs/custom-templates" element={<CustomTemplates />} />
+          <Route path="/docs/keyboard-shortcuts" element={<KeyboardShortcuts />} />
+          <Route path="/docs/advanced-search" element={<AdvancedSearch />} />
+          <Route path="/docs/data-export" element={<DataExport />} />
           {/* Dynamic fallback */}
           <Route path="/docs/:category" element={<DocsCategoryPage />} />
           {/* Catch-all route */}
