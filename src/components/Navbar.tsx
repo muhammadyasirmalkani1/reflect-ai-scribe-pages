@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -31,12 +30,16 @@ const Navbar = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="ghost" className="text-white">
-            Login
-          </Button>
-          <Button className="bg-cosmic-gradient hover:opacity-90 transition-opacity">
-            Sign Up
-          </Button>
+          <Link to="/login">
+            <Button variant="ghost" className="text-white">
+              Login
+            </Button>
+          </Link>
+          <Link to="/signup">
+            <Button className="bg-cosmic-gradient hover:opacity-90 transition-opacity">
+              Sign Up
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -55,12 +58,16 @@ const Navbar = () => {
             <Link to="/blog" className="text-gray-300 hover:text-white py-2 transition-colors" onClick={toggleMenu}>Blog</Link>
             <Link to="/docs" className="text-gray-300 hover:text-white py-2 transition-colors" onClick={toggleMenu}>Docs</Link>
             <div className="pt-4 flex flex-col space-y-2">
-              <Button variant="ghost" className="text-white w-full">
-                Login
-              </Button>
-              <Button className="bg-cosmic-gradient hover:opacity-90 transition-opacity w-full">
-                Sign Up
-              </Button>
+              <Link to="/login" onClick={toggleMenu}>
+                <Button variant="ghost" className="text-white w-full">
+                  Login
+                </Button>
+              </Link>
+              <Link to="/signup" onClick={toggleMenu}>
+                <Button className="bg-cosmic-gradient hover:opacity-90 transition-opacity w-full">
+                  Sign Up
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

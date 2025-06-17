@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -37,6 +36,10 @@ import CustomTemplates from "./pages/docs/CustomTemplates";
 import KeyboardShortcuts from "./pages/docs/KeyboardShortcuts";
 import AdvancedSearch from "./pages/docs/AdvancedSearch";
 import DataExport from "./pages/docs/DataExport";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Dashboard from "./pages/Dashboard";
+import Vault from "./pages/Vault";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +51,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/vault" element={<Vault />} />
           <Route path="/products" element={<Products />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/company" element={<Company />} />
@@ -57,7 +64,7 @@ const App = () => (
           <Route path="/docs/all" element={<DocsList />} />
           {/* Category pages */}
           <Route path="/docs/getting-started" element={<DocsCategoryPage />} />
-          <Route path="/docs/features" element={<DocsCategoryPage />} />
+          <Route path="/docs/features" element={<DocsCategoryPage />}  />
           <Route path="/docs/guides" element={<DocsCategoryPage />} />
           <Route path="/docs/integrations" element={<DocsCategoryPage />} />
           <Route path="/docs/troubleshooting" element={<DocsCategoryPage />} />
