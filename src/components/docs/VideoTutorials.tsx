@@ -6,7 +6,8 @@ const tutorials = [
   {
     title: "Getting Started with Reflect",
     duration: "6:42",
-    thumbnail: "https://youtube.com/shorts/eLVhLl8sY2c?si=B2NFUsXpPzjwgKXp"
+    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+    url: "https://youtube.com/shorts/eLVhLl8sY2c?si=B2NFUsXpPzjwgKXp"
 
   },
   {
