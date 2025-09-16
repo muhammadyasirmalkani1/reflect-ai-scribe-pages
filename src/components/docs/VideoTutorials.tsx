@@ -16,7 +16,7 @@ const tutorials: Tutorial[] = [
     duration: "6:42",
     thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     // point to the public/Video/Couple.mp4 file (served at /Video/Couple.mp4)
-    videoUrl: "public/Video/Couple.mp4"
+    videoUrl: "/Video/Couple.mp4"
   },
   {
     title: "Setting Up Your Knowledge Graph",
