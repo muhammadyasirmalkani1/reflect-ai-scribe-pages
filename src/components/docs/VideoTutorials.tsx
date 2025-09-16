@@ -7,7 +7,7 @@ const tutorials = [
     title: "Getting Started with Reflect",
     duration: "6:42",
     thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
-    link url: "https://youtu.be/hix4ux2hATg?si=XaHY82GgPNuMKFDF"
+
   },
   {
     title: "Setting Up Your Knowledge Graph",
