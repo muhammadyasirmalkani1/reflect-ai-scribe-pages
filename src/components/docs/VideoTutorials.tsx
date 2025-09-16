@@ -15,7 +15,8 @@ const tutorials: Tutorial[] = [
     title: "Getting Started with Reflect",
     duration: "6:42",
     thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    videoUrl: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+    // point to the public/Video/Couple.mp4 file (served at /Video/Couple.mp4)
+    videoUrl: "/Video/Couple.mp4"
   },
   {
     title: "Setting Up Your Knowledge Graph",
