@@ -41,7 +41,7 @@ const Index = () => {
       <Testimonials />
       
       {/* Integration section */}
-      <div className="py-20 relative">
+      <div className="py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <motion.h2 
@@ -64,19 +64,40 @@ const Index = () => {
             </motion.p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
-            {["Notion", "Slack", "Google Drive", "Dropbox", "Figma", "GitHub"].map((app, index) => (
-              <motion.div
-                key={app}
-                className="bg-reflect-dark/50 backdrop-blur-sm border border-white/10 p-4 rounded-xl flex items-center justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-              >
-                <p className="font-medium">{app}</p>
-              </motion.div>
-            ))}
+          {/* Sliding carousel */}
+          <div className="relative">
+            <motion.div 
+              className="flex gap-8"
+              animate={{ x: [0, -100, -200, -300, -400, -500, 0] }}
+              transition={{ 
+                duration: 20, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
+            >
+              {/* First set */}
+              {["Notion", "Slack", "Google Drive", "Dropbox", "Figma", "GitHub"].map((app, index) => (
+                <motion.div
+                  key={`${app}-1`}
+                  className="bg-reflect-dark/50 backdrop-blur-sm border border-white/10 p-6 rounded-xl flex items-center justify-center min-w-[200px] flex-shrink-0"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <p className="font-medium text-lg">{app}</p>
+                </motion.div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {["Notion", "Slack", "Google Drive", "Dropbox", "Figma", "GitHub"].map((app, index) => (
+                <motion.div
+                  key={`${app}-2`}
+                  className="bg-reflect-dark/50 backdrop-blur-sm border border-white/10 p-6 rounded-xl flex items-center justify-center min-w-[200px] flex-shrink-0"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <p className="font-medium text-lg">{app}</p>
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>
