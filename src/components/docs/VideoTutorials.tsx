@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
@@ -5,20 +6,17 @@ const tutorials = [
   {
     title: "Getting Started with Reflect",
     duration: "6:42",
-    thumbnail: "https://img.youtube.com/vi/eLVhLl8sY2c/hqdefault.jpg",
-    url: "https://youtube.com/shorts/eLVhLl8sY2c?si=B2NFUsXpPzjwgKXp"
+    thumbnail: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
   },
   {
     title: "Setting Up Your Knowledge Graph",
     duration: "8:15",
-    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    url: "https://www.youtube.com/watch?v=example2"
+    thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
   },
   {
     title: "AI Assistant Features",
     duration: "10:24",
-    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-    url: "https://www.youtube.com/watch?v=example3"
+    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
   }
 ];
 
@@ -56,14 +54,9 @@ const VideoTutorials = () => {
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                  <a
-                    href={tutorial.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-14 h-14 rounded-full bg-reflect-purple/90 flex items-center justify-center cursor-pointer hover:bg-reflect-purple transition-colors"
-                  >
+                  <div className="w-14 h-14 rounded-full bg-reflect-purple/90 flex items-center justify-center cursor-pointer hover:bg-reflect-purple transition-colors">
                     <Play className="w-6 h-6 text-white ml-1" />
-                  </a>
+                  </div>
                 </div>
                 <div className="absolute bottom-2 right-2 bg-black/70 px-2 py-1 rounded text-xs">
                   {tutorial.duration}
