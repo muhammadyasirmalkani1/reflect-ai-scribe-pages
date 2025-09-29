@@ -40,10 +40,10 @@ const InstallingReflect = () => {
                 </p>
                 <div className="space-y-2">
 
-                  <button className="w-full bg-reflect-purple hover:bg-reflect-purple/80 text-white px-4 py-2 rounded-lg transition-colors">                  <Link href="https://apps.apple.com/pk/app/reflect-notes/id1575595407">
-                    <Download className="w-4 h-4 inline mr-2" />
+                  <button className="w-full bg-reflect-purple hover:bg-reflect-purple/80 text-white px-4 py-2 rounded-lg transition-colors"                
+                    <Download className="w-4 h-4 inline mr-2" /><Link href="https://apps.apple.com/pk/app/reflect-notes/id1575595407"
                     Download for macOS
-                </Link>
+</Link>
                   </button>
                 
 
