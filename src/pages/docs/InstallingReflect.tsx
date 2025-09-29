@@ -39,12 +39,13 @@ const InstallingReflect = () => {
                   Download the native desktop application for the best performance and offline access.
                 </p>
                 <div className="space-y-2">
-                  <Link href="https://apps.apple.com/pk/app/reflect-notes/id1575595407">
-                  <button className="w-full bg-reflect-purple hover:bg-reflect-purple/80 text-white px-4 py-2 rounded-lg transition-colors">
+
+                  <button className="w-full bg-reflect-purple hover:bg-reflect-purple/80 text-white px-4 py-2 rounded-lg transition-colors">                  <Link href="https://apps.apple.com/pk/app/reflect-notes/id1575595407">
                     <Download className="w-4 h-4 inline mr-2" />
                     Download for macOS
-                  </button>
                 </Link>
+                  </button>
+                
 
                   <button className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors">
                     <Download className="w-4 h-4 inline mr-2" />
