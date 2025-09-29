@@ -23,7 +23,7 @@ const tutorials: Tutorial[] = [
     duration: "8:15",
     thumbnail: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     videoUrl:
-      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+      "/Video/Stackend.mp4"
   },
   {
     title: "AI Assistant Features",
