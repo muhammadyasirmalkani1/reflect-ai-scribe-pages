@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
 import Products from "./pages/Products";
 import PricingPage from "./pages/PricingPage";
 import Company from "./pages/Company";
@@ -100,8 +99,6 @@ const App = () => (
           <Route path="/docs/data-export" element={<DataExport />} />
           {/* Dynamic fallback */}
           <Route path="/docs/:category" element={<DocsCategoryPage />} />
-          {/* Catch-all route */}
-          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
