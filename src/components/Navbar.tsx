@@ -15,9 +15,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-2">
           <div className="w-10 h-10 rounded-full bg-cosmic-gradient flex items-center justify-center">
-            <span className="text-white font-bold text-xl">R</span>
+            <span className="text-white font-bold text-xl">Reflect</span>
           </div>
-          <span className="text-2xl font-semibold text-white">Reflect</span>
+          <span className="text-2xl font-semibold text-white"></span>
         </Link>
 
         {/* Desktop Navigation */}
